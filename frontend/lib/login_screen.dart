@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
         final List<dynamic> r = jsonDecode(response.body);
         if(r.isNotEmpty)
         {
-          Authentication.user = "pxl-admin";
+          Authentication.user = userNameController.text;
           Navigator.of(context).pushNamed(LandingPage.route);
         }
         else

@@ -15,7 +15,8 @@ RUN flutter upgrade
 # Copy files to container and build
 RUN mkdir /app/
 COPY . /app/
-WORKDIR /app/RUN flutter build web
+WORKDIR /app/
+RUN flutter build web
 
 
 FROM nginx:1.21.1-alpine
